@@ -1,9 +1,13 @@
 {
-  "name": "Todo",
+  "name": "book",
+  "plural": "books",
   "base": "PersistedModel",
-  "schema": "todo",
   "properties": {
-    "content": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "id": {
       "type": "string",
       "required": true
     }

@@ -3,5 +3,14 @@
     "name": "db",
     "connector": "memory",
     "file": "db.json"
+  },
+  "mysql": {
+    "host": "inf.mp.zp.ua",
+    "port": 3306,
+    "database": "inf_test",
+    "username": "inf",
+    "password": "artlebedev",
+    "name": "mysql",
+    "connector": "mysql"
   }
 }

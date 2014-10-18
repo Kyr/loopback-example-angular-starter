@@ -1,9 +1,9 @@
 {
-  "name": "Todo",
-  "base": "PersistedModel",
-  "schema": "todo",
+  "name": "user",
+  "plural": "users",
+  "base": "User",
   "properties": {
-    "content": {
+    "username": {
       "type": "string",
       "required": true
     }

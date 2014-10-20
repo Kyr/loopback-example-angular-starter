@@ -1,6 +1,6 @@
 {
   "name": "User",
-  "base": "PersistedModel",
+  "base": "User",
   "properties": {
     "login": {
       "type": "string",

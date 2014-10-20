@@ -5,11 +5,11 @@
     "file": "db.json"
   },
   "mysql": {
-    "host": "localhost",
+    "host": "inf.mp.zp.ua",
     "port": 3306,
-    "database": "loopback",
-    "username": "loopback",
-    "password": "12345",
+    "database": "inf_test",
+    "username": "inf",
+    "password": "artlebedev",
     "name": "mysql",
     "connector": "mysql"
   }

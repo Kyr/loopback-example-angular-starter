@@ -4,7 +4,17 @@ angular
   .module('app')
   .controller('TodoCtrl', ['$scope', '$state', 'Todo', function($scope, $state,
       Todo) {
+
+		var emptyTodo = {
+			content: '',
+			createdAt: (function(){ return new Date(); })(),
+			complete: false
+		};
+
+//		$scope.newTodo = emptyTodo;
+
     $scope.todos = [];
+
     function getTodos() {
       Todo
         .find()
@@ -16,12 +26,17 @@ angular
     getTodos();
 
     $scope.addTodo = function() {
+
+			$scope.newTodo.createdAt = new Date();
+			$scope.newTodo.complete = false;
+
       Todo
         .create($scope.newTodo)
         .$promise
         .then(function(todo) {
-          $scope.newTodo = '';
-          $scope.todoForm.content.$setPristine();
+          $scope.newTodo.content = '';
+//          $scope.todoForm.content.$setPristine();
+          $scope.todoForm.$setPristine();
           $('.focus').focus();
           getTodos();
         });
@@ -35,4 +50,14 @@ angular
           getTodos();
         });
     };
+
+		$scope.setComplete = function(item){
+
+			Todo.upsert(item)
+				.$promise
+				.then(function(){
+					console.log('updated');
+				});
+
+		}
   }]);

@@ -5,10 +5,24 @@
     "content": {
       "type": "string",
       "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true
+    },
+    "complete": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "account": {
+      "type": "belongTo",
+      "model": "user"
+    }
+  },
   "acls": [],
   "methods": []
 }

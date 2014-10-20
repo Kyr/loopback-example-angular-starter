@@ -1,0 +1,22 @@
+{
+  "name": "User",
+  "base": "PersistedModel",
+  "properties": {
+    "login": {
+      "type": "string",
+			"required": false
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    },
+		"password" :{
+			"type": "string",
+			"required": true
+		}
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

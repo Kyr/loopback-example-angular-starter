@@ -4,3 +4,5 @@
 db.json
 client/vendor
 node_modules
+server/datasources.json
+server/config.json
